@@ -7,13 +7,13 @@
 </head>
 <body>
 
-<form method="post" class="form js-form-validate">
+<form method="post" class="form js-validate-field-form">
   <fieldset>
     <legend>Your details</legend>
 
     <div class="form__field">
       <label for="fname">First name</label>
-      <input class="js-validate" type="fname" name="user[fname]" id="fname" required>
+      <input class="js-validate-field" type="fname" name="user[fname]" id="fname" required>
       <span class="nb">Required</span>
     </div>
 
@@ -24,7 +24,7 @@
 
     <div class="form__field">
       <label for="email">Email address</label>
-      <input class="js-validate" type="text" name="user[email]" id="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Please enter a valid email address" required>
+      <input class="js-validate-field" type="text" name="user[email]" id="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Please enter a valid email address" required>
     </div>
   </fieldset>
 
@@ -55,24 +55,24 @@
 
     <div class="form__field">
       <label for="password">Password</label>
-      <input class="js-validate" type="password" name="user[password]" id="password" required pattern=".{6,}" title="Should be at least 6 characters long">
+      <input class="js-validate-field" type="password" name="user[password]" id="password" required pattern=".{6,}" title="Should be at least 6 characters long">
     </div>
 
     <div class="form__field">
       <label for="confirmnewpassword">Re-type</label>
-      <input class="js-validate" type="password" name="user[passwordconfirm]" id="confirmnewpassword" required title="Should match the above password" data-same-as="password">
+      <input class="js-validate-field" type="password" name="user[passwordconfirm]" id="confirmnewpassword" required title="Should match the above password" data-same-as="password">
     </div>
   </fieldset>
 
   <div class="form__field form__field--checkbox">
     <label>
-      <input type="checkbox" name="agree" id="agree" class="js-validate" title="Please read and agree to this" required>
+      <input type="checkbox" name="agree" id="agree" class="js-validate-field" title="Please read and agree to this" required>
 
       I agree to the <a target="_blank" href="https://dadi.cloud/privacy" class="link--dotted">Privacy Policy</a>
     </label>
   </div>
 
-  <button type="submit" class="btn">
+  <button type="submit" class="js-validate-submit">
     Submit your order
   </button>
 </form>

@@ -1,5 +1,5 @@
 // Get all the forms with the given class
-var forms = document.querySelectorAll('.js-form-validate');
+var forms = document.querySelectorAll('.js-validate-form');
 
 // Loop over each form
 for (x = 0; x < forms.length; ++x) {  
@@ -7,7 +7,7 @@ for (x = 0; x < forms.length; ++x) {
   var form = forms[x]
   
   // Find submit button
-  var button = forms[x].querySelectorAll('.btn')[0];
+  var button = forms[x].querySelectorAll('.js-validate-submit')[0];
 
   // Disable browser validation
   form.setAttribute('novalidate', 'novalidate');
@@ -98,7 +98,6 @@ function fieldMessage (field, event) {
     field.value.length > 0 &&
     !isValid
   ) {
-    console.log(field.value)
     field.parentNode.classList.add('has-error');
     err.innerHTML = msg;
     err.classList.remove('js-hide');
