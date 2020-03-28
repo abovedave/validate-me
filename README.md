@@ -16,7 +16,9 @@ Example, making sure a field is no more than 15 characters and only lowercase.
 3. For every field you want to validate add the class `js-validate-field`
 4. Add a submit button with class `js-validate-submit`
 
-## Limitations
+## Notes & limitations
 
 - No `<select>` support
 - Disables a the button of class `js-validate-submit` - only enabled if form becomes valid
+- Falls back to default browser validation
+- You probably need something serve-side if you use in production
