@@ -19,7 +19,7 @@ for (x = 0; x < forms.length; ++x) {
   var allowSubmit = false;
 
   // Inputs to validate
-  var inputs = form.querySelectorAll('.js-validate');
+  var inputs = form.querySelectorAll('.js-validate-field');
 
   // Loop over each input, add a <span> to hold error messages
   for (y = 0; y < inputs.length; ++y) {
