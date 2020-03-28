@@ -4,7 +4,7 @@ var forms = document.querySelectorAll('.js-validate-form');
 // Loop over each form
 for (x = 0; x < forms.length; ++x) {  
   // This form instance
-  var form = forms[x]
+  var form = forms[x];
   
   // Find submit button
   var button = forms[x].querySelectorAll('.js-validate-submit')[0];
@@ -74,7 +74,7 @@ function fieldMessage (field, event) {
   var err = field.parentNode.querySelectorAll('.js-hint')[0];
  
   // Instances where we need to compare two fields
-  var sameAs = document.getElementById(field.getAttribute('data-same-as'))
+  var sameAs = document.getElementById(field.getAttribute('data-same-as'));
   var isValid = sameAs ? (field.value === sameAs.value) : field.checkValidity();
 
   if (sameAs && !isValid) {
@@ -84,7 +84,7 @@ function fieldMessage (field, event) {
   }
 
   // Enble any fields which are dependant on this being filled
-  var child = document.getElementById(field.getAttribute('data-child'))
+  var child = document.getElementById(field.getAttribute('data-child'));
 
   if (child && field.value) {
     child.disabled = false;
