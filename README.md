@@ -1,6 +1,6 @@
 Proof of concept for a JS enhancement to [HTML5 form validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation), so you can display errors in `<span>` elements that you can style to your needs.
 
-Example, making sure a field is no more than 15 characters and only lowercase.
+Example, making sure a field is between 2 and 15 characters and only lowercase.
 
 ```
 <form class="js-validate-form"> 
