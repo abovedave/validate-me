@@ -1,0 +1,168 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #fff;
+  display: flex;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Forms */
+
+.form {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  padding: 50px 0;
+}
+.form fieldset {
+  border: 1px solid #ddd;
+  background:;
+  border-radius: 5px;
+  padding: 20px;
+  padding-bottom: 0;
+  margin: 30px 0;
+}
+.form fieldset legend {
+  padding: 0 10px;
+  margin-left: -10px;
+  color: #aaa;
+}
+
+.form__field {
+  position: relative;
+  margin-bottom: 20px;
+}
+.form__field label {
+  letter-spacing: -0.01em;
+  padding-bottom: 8px;
+  display: block;
+}
+.form__field input,
+.form__field textarea,
+.form__field select {
+  background: #fff;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E6E7E8;
+  outline: none;
+  padding: 10px;
+  appearance: none;
+  z-index: 1;
+  position: relative;
+  border-radius: 4px;
+  font-size: 1.3rem;
+}
+.form__field input:hover,
+.form__field textarea:hover {
+  border-color: #ddd;
+}
+.form__field input:focus,
+.form__field textarea:focus {
+  border-color: #3585fa !important;
+}
+
+.form__field .nb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Hero checkbox field */
+
+.form__field--checkbox label {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  padding: 10px 15px;
+  padding-left: 35px;
+  background: #ebf4ff;
+  user-select: none;
+  border-radius: 5px;
+  color: #3585fa;
+}
+.form__field--checkbox label:hover {
+  background: #DCE6F4;
+}
+.form__field--checkbox input {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: auto;
+}
+.form__field--checkbox .js-hint {
+  display: none;
+}
+.form__field--checkbox .has-error {
+  background: #f9e8ab;
+}
+
+/* Button */
+
+.btn {
+  background: #3585fa;
+  color: #fff;
+  padding: 20px 30px;
+  font-size: 0.9rem;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.btn:focus {
+  box-shadow: 0 0 0 7px #eee;
+}
+.btn:hover {
+  background: #2662B9;
+}
+.btn--success {
+  background: #0ecc5f;
+}
+.btn[disabled] {
+  background: #ddd;
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* Holds the feedback message for each form */
+
+.form__field .js-hint {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #ebf4fe;
+  border-radius: 30px;
+  padding: 2px 8px;
+  font-size: 0.9rem;
+  transition: opacity 0.3s, top 0.5s;
+  opacity: 1;
+}
+.form__field .js-hint.js-hide {
+  transition: opacity 0.3s, top 0.5s;
+  opacity: 0;
+}
+.form__field.has-error input {
+  border-color: #F03D3D;
+}
+
+.form__field input {
+  transition: background 0.5s;
+  background-position: calc(100% - 10px) 200%;
+}
+.form__field input.js-validate:valid {
+  background-image: url(./icon-check.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) 50%;
+  background-size: 20px;
+}
+.form__field input.js-validate:valid + .form__attachment {
+  right: 45px;
+}

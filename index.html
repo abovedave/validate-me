@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML5 Form Validation</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body>
+
+<form method="post" class="form js-form-validate">
+  <fieldset>
+    <legend>Your details</legend>
+
+    <div class="form__field">
+      <label for="fname">First name</label>
+      <input class="js-validate" type="fname" name="user[fname]" id="fname" required>
+      <span class="nb">Required</span>
+    </div>
+
+    <div class="form__field">
+      <label for="lname">Last name</label>
+      <input type="lname" name="user[lname]" id="lname">
+    </div>
+
+    <div class="form__field">
+      <label for="email">Email address</label>
+      <input class="js-validate" type="text" name="user[email]" id="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Please enter a valid email address" required>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Your location</legend>
+
+    <div class="form__field">
+      <label for="city">City</label>
+      <input type="city" name="user[city]" id="city">
+    </div>
+
+    <div class="form__field">
+      <label for="country">Country</label>
+      <select name="user[country]" id="country" required>
+        <option hidden selected disabled>Select a country…</option>
+
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="United States">United States</option>
+        <option value="Canada">Canada</option>
+        <option value="France">France</option>
+        <option value="Japan">Japan</option>
+      </select>
+    </div>
+  </fieldset>
+  
+  <fieldset>
+    <legend>Set a password</legend>
+
+    <div class="form__field">
+      <label for="password">Password</label>
+      <input class="js-validate" type="password" name="user[password]" id="password" required pattern=".{6,}" title="Should be at least 6 characters long">
+    </div>
+
+    <div class="form__field">
+      <label for="confirmnewpassword">Re-type</label>
+      <input class="js-validate" type="password" name="user[passwordconfirm]" id="confirmnewpassword" required title="Should match the above password" data-same-as="password">
+    </div>
+  </fieldset>
+
+  <div class="form__field form__field--checkbox">
+    <label>
+      <input type="checkbox" name="agree" id="agree" class="js-validate" title="Please read and agree to this" required>
+
+      I agree to the <a target="_blank" href="https://dadi.cloud/privacy" class="link--dotted">Privacy Policy</a>
+    </label>
+  </div>
+
+  <button type="submit" class="btn">
+    Submit your order
+  </button>
+</form>
+
+<script src="./validation.js"></script>
+
+</body>
+</html>
