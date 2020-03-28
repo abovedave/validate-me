@@ -157,12 +157,12 @@ body {
   transition: background 0.5s;
   background-position: calc(100% - 10px) 200%;
 }
-.form__field input.js-validate:valid {
+.form__field input.js-validate-field:valid {
   background-image: url(./icon-check.svg);
   background-repeat: no-repeat;
   background-position: calc(100% - 10px) 50%;
   background-size: 20px;
 }
-.form__field input.js-validate:valid + .form__attachment {
+.form__field input.js-validate-field:valid + .form__attachment {
   right: 45px;
 }
